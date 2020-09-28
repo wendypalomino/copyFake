@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, p{
+    color: whitesmoke;
+}
+
+.btn{
+    background-color: #C3144D !important;
+    border-radius: 30px;
+    width: 200px;
+
+}
+
+.btn:hover{
+    background-color: #c2416c !important;
+}
+
+.btn:active{
+    background-color: #c2416c;
+    transform: scale(0.95);
+    
+}
+
+
+.paso1{
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background-image: url('/app/img/lluviatv.gif');
+
+    animation: lluvia .5s;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    z-index: 1000;
+}
+
+.paso2{
+    position: relative;
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.paso3{
+    position: absolute;
+
+    opacity: 0;
+    z-index: 0;
+}
+
+@keyframes lluvia{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.out-panel{
+    position: absolute;
+
+    animation: outPanel 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes outPanel{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+.in-panel{
+    position: relative;
+
+    animation: inPanel 1s;
+    animation-fill-mode: forwards;
+    will-change: opacity;
+
+    z-index: 1001;
+}
+
+@keyframes inPanel{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
