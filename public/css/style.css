@@ -17,6 +17,29 @@ h1, h2, h3, p{
     border-radius: 30px;
     width: 200px;
 
+    animation: focobtn 5s;
+    animation-delay: 7s;
+    animation-iteration-count: 2;
+    
+}
+
+@keyframes focobtn{
+    0%{
+        box-shadow: none;
+    }
+    25%{
+        box-shadow: 0 4px 40px 0 rgba(255, 0, 0, 0.4), 0 6px 40px 0 rgba(255, 0, 0, 0.4);
+    }
+    50%{
+        box-shadow: none;
+    }
+    75%{
+        box-shadow: 0 4px 40px 0 rgba(255, 0, 0, 0.4), 0 6px 40px 0 rgba(255, 0, 0, 0.4);
+    }
+    100%{
+        box-shadow: none;
+    }
+
 }
 
 .btn:hover{
@@ -44,7 +67,7 @@ h1, h2, h3, p{
 
 .paso2{
     position: relative;
-    
+
     width: 100%;
     display: flex;
     justify-content: center;
@@ -61,6 +84,24 @@ h1, h2, h3, p{
 
 @keyframes lluvia{
     0%{
+        opacity: 1;
+    }
+    20%{
+        background-position: -10px -10px;
+    }
+    40%{
+        background-position: 0px 0px;
+        opacity: .5;
+    }
+    50%{
+        opacity: 1;
+    }
+    60%{
+        background-position: -10px -10px;
+        opacity: .5;
+    }
+    80%{
+        background-position: 0px 0px;
         opacity: 1;
     }
     100%{
@@ -102,5 +143,49 @@ h1, h2, h3, p{
     }
     100%{
         opacity: 1;
+    }
+}
+
+.mascara{
+    position: relative;
+    width: 240px;
+    height: 240px;
+    /* border: 1px solid whitesmoke; */
+
+    background-image: url('/app/img/mascaras.png');
+
+    animation: nextimg .4s;
+    animation-timing-function: steps(8);
+    animation-fill-mode: forwards;
+
+    animation-delay: 6s;
+}
+
+@keyframes nextimg{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: right;
+        /* background-position: 720px 0; */
+    }
+}
+
+#mascara1, #mascara2, #mascara3, #mascara4{
+    transform: scale(0.1);
+    cursor: pointer;
+}
+
+.escala-mascara{
+    animation: escalaMascara 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes escalaMascara{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
     }
 }
