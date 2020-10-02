@@ -16,5 +16,6 @@ $btn.addEventListener('click', function(e) {
 
 document.querySelector('#mascara1').addEventListener('click', function(e) {
 
+    document.querySelector('.msg').classList.add('capa-msg')
 
 })
