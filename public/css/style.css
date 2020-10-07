@@ -82,6 +82,13 @@ h1, h2, h3, p{
     z-index: 0;
 }
 
+.paso4{
+    position: absolute;
+
+    opacity: 0;
+    z-index: 0;
+}
+
 @keyframes lluvia{
     0%{
         opacity: 1;
@@ -210,6 +217,25 @@ h1, h2, h3, p{
         opacity: 0;
     }
     100%{
-        opacity: 0.9;
+        opacity: 0.99;
+    }
+}
+
+.capa-msg-off{
+ 
+    animation: capa-msg-off .8s;
+    animation-fill-mode: forwards;
+
+    will-change: opacity;
+}
+
+@keyframes capa-msg-off{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
     }
 }
