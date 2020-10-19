@@ -1,21 +1,15 @@
-const $btn = document.querySelector('#btnDescubrir')
+const $page1 = document.querySelector('.page1')
+const $page2 = document.querySelector('.page2')
 
-$btn.addEventListener('click', function(e) {
+setTimeout(() => {  $page1.classList.add('out-panel'); }, 5000);
 
-    document.querySelector('.paso2').classList.add('out-panel')
-    document.querySelector('.paso3').classList.add('in-panel')
-
-    document.querySelector('#mascara1').classList.add('escala-mascara')
-
-    setTimeout(() => {  document.querySelector('#mascara2').classList.add('escala-mascara'); }, 2000);
-    setTimeout(() => {  document.querySelector('#mascara3').classList.add('escala-mascara'); }, 3000);
-    setTimeout(() => {  document.querySelector('#mascara4').classList.add('escala-mascara'); }, 4000);
+$page1.addEventListener("animationend", (e)=>{
     
-})
-
-
-document.querySelector('#mascara1').addEventListener('click', function(e) {
-
-    document.querySelector('.msg').classList.add('capa-msg')
-
+    if(e.animationName === "outPanel"){
+        
+        // $page2.style.animationName = "inPanel"
+        // $page2.style.animationDuration = "1s"
+        $page2.classList.add('in-panel')
+    }
+    
 })
