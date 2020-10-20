@@ -6,11 +6,83 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 h1, h2, h3, p{
     color: whitesmoke;
 }
+
+.btn{
+    background-color: #C3144D !important;
+    border-radius: 30px;
+    width: 200px;
+
+    animation: focobtn 5s;
+    animation-delay: 6s;
+    animation-iteration-count: 2;
+    
+}
+
+@keyframes focobtn{
+    0%{
+        box-shadow: none;
+    }
+    25%{
+        box-shadow: 0 4px 40px 0 rgba(255, 0, 0, 0.4), 0 6px 40px 0 rgba(255, 0, 0, 0.4);
+    }
+    50%{
+        box-shadow: none;
+    }
+    75%{
+        box-shadow: 0 4px 40px 0 rgba(255, 0, 0, 0.4), 0 6px 40px 0 rgba(255, 0, 0, 0.4);
+    }
+    100%{
+        box-shadow: none;
+    }
+
+}
+
+.btn:hover{
+    background-color: #c2416c !important;
+}
+
+.btn:active{
+    background-color: #c2416c;
+    transform: scale(0.95);
+    
+}
+
+.down{
+
+    font-size: 100px;
+    text-decoration: none;
+    color: #C3144D;
+
+    animation: down 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes down{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 
 /* Animacion para pagina 1 */
 
@@ -94,14 +166,150 @@ h1, h2, h3, p{
     height: inherit;
 
     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     align-items: center;
     justify-content: center;
 
     opacity: 0;
 }
 
+.mascaras{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-column-gap: 60px;
+    padding-right: 100px;
+}
 
 
+#mascara1, #mascara2, #mascara3, #mascara4{
+    transform: scale(0.1);
+    cursor: pointer;
+}
+
+
+.escala-mascara{
+    animation: escalaMascara 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes escalaMascara{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+/* Página 3 */
+
+.page3{
+    position: absolute;
+
+    width: 100%;
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+}
+
+.rueda{
+    animation: rueda .9s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes rueda{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Página 4 */
+
+.page4{
+    position: absolute;
+
+    width: 100%;
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+}
+
+/* Página 4 */
+
+.page5{
+    position: absolute;
+
+    width: 100%;
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+}
+
+/* Transiones de paneles */
+
+.top-panel{
+    animation: topPanel 2s ;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes topPanel{
+    0%{
+        /* transition-timing-function: ease; */
+        transform: translate(0px);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+
+.bottom-panel{
+    animation: bottomPanel 2s ;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes bottomPanel{
+    0%{
+        /* transition-timing-function: ease; */
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
 
 
 .out-panel{
