@@ -1,0 +1,592 @@
+
+.center-v-h{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para page1 */
+
+.page1{
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    opacity: 0;
+    text-align: center;
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/mascaras.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+}
+
+
+.container{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.text-small{
+    font-size: 25px; 
+    font-weight: 400; 
+}
+
+.text-medium{
+    font-size: 48px; font-weight: 600; 
+}
+
+
+.text-big{
+    font-size: 96px; font-weight: 600; 
+}
+
+.text-big-ultra{
+    font-size: 130px; font-weight: 600; 
+}
+
+
+/* Estilos para page2 */
+
+.page2{
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    text-align: center;
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondorojo2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+
+.change-fondo{
+    transition-duration: 0.5s;
+
+    background-image: url('/app/img/v2/fondorojo2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+
+
+  /* Estilos para page3 */
+
+.page3{
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    text-align: center;
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondorojo3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    
+}
+
+.page4{
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr 2fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondorojo4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    
+}
+
+.page5{
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    background-image: url('/app/img/v2/fondorojo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+
+}
+
+.page6{
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    text-align: center;
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondorojo2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    
+}
+
+
+.page7{
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr 2fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondo5.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    
+}
+
+.page8{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    padding: 10px;
+
+    background-image: url('/app/img/v2/fondorojo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+}
+
+
+.page9{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    text-align: center;
+    padding: 10px;
+
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondorojo2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+
+}
+
+
+
+.page10{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/fondo6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+
+}
+
+.page11{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr 2fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondo7.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    
+}
+
+
+.page12{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/fondorojo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+
+}
+
+
+.page13{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondonegro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    
+}
+
+.page14{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 1fr 2fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondomascara.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+    opacity: 0;
+    
+}
+
+.page15{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 1fr 2fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondomascara2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+    opacity: 0;
+    
+}
+
+.page16{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr .5fr 2.5fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    /* column-gap: 10px;
+    row-gap: 10px; */
+
+    background-image: url('/app/img/v2/fondomascara3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+    opacity: 0;
+    
+}
+
+
+
+.page17{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondonegro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+    opacity: 0;
+    
+}
+
+
+.page18{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondomascaras.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+    opacity: 0;
+    
+}
+
+.page18{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondomascaras.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+    opacity: 0;
+    
+}
+
+.page19{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondohumo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+    opacity: 0;
+    
+}
+
+.page20{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/fondoplomo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+
+}
+
+.page21{
+
+    position: absolute;
+    display: grid;
+    grid-template: 1fr 2fr 1fr / 1fr;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    text-align: center;
+
+    padding: 10px;
+    
+    column-gap: 10px;
+    row-gap: 10px;
+
+    background-image: url('/app/img/v2/fondoplomo2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    
+}
+
+
+.page22{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/ahora.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+    opacity: 0;
+
+}
+
+
+
+
+

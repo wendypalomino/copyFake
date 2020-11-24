@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Battambang&display=swap');
 
 body{
     margin: 0;
     height: 100vh;
+
     background-color: black;
 
     display: flex;
@@ -10,7 +11,7 @@ body{
     align-items: center;
     overflow: hidden;
 
-    font-family: 'Rubik', sans-serif !important;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 
@@ -19,7 +20,7 @@ h1, h2, h3, p{
 }
 
 .btn{
-    background-color: #C3144D !important;
+    background-color: #B00909 !important;
     border-radius: 30px;
     width: 200px;
 
@@ -55,14 +56,16 @@ h1, h2, h3, p{
 .btn:active{
     background-color: #c2416c;
     transform: scale(0.95);
-    
 }
 
 .down{
 
     font-size: 100px;
     text-decoration: none;
-    color: #C3144D;
+    color: #B00909;
+
+    border: 2px solid #B00909;
+    border-radius: 50%;
 
     animation: down 3s;
     animation-fill-mode: forwards;
@@ -91,7 +94,7 @@ h1, h2, h3, p{
 
 /* Animacion para pagina 1 */
 
-.page1{
+/* .page1{
 
     position: absolute;
 
@@ -101,7 +104,7 @@ h1, h2, h3, p{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .tv{
     position: absolute;
@@ -208,24 +211,6 @@ h1, h2, h3, p{
 }
 
 
-/* Página 3 */
-
-.page3{
-    position: absolute;
-
-    width: 100%;
-    height: inherit;
-
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-
-}
-
 .rueda{
     animation: rueda .9s;
     animation-iteration-count: infinite;
@@ -242,99 +227,11 @@ h1, h2, h3, p{
 }
 
 
-/* Página 4 */
-
-.page4{
-    position: absolute;
-
-    width: 100%;
-    height: inherit;
-
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-
-}
-
-/* Página 5 */
-
-.page5{
-    position: absolute;
-
-    width: 100%;
-    height: inherit;
-
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-
-}
-
-/* Página 6 */
-
-.page6{
-    position: absolute;
-
-    width: 100%;
-    height: inherit;
-
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-
-}
-
-/* Página 7 */
-
-.page7{
-    position: absolute;
-
-    width: 100%;
-    height: inherit;
-
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-
-}
-
-/* Página 8 */
-
-.page8{
-    position: absolute;
-
-    width: 100%;
-    height: inherit;
-
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-
-}
 
 /* Página 9 */
 
-.page9, .page10, .page11, .page12, .page13{
+/* 
+    .page9, .page10, .page11, .page12, .page13{
     position: absolute;
 
     width: 100%;
@@ -348,13 +245,13 @@ h1, h2, h3, p{
 
     opacity: 0;
 
-}
+} */
 
 
 input{
 
-    width: 100%;
-    border: 2px solid #C3144D !important;
+    width: 465px !important;
+    border: 2px solid #B00909 !important;
     box-sizing: border-box;
 
     background-color: #1D1D1D !important;
@@ -366,14 +263,14 @@ input{
 }
 
 
-
 /* Transiciones de paneles */
 
+
 .top-panel{
-    animation: topPanel 2s ;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    opacity: 1;
+    animation: topPanel 2s !important;
+    animation-timing-function: ease !important;
+    animation-fill-mode: forwards !important;
+    opacity: 1 !important;
 }
 
 @keyframes topPanel{
@@ -382,19 +279,19 @@ input{
         transform: translate(0px);
     }
     100%{
-        transform: translateY(-100%);
+        transform: translateY(-105%);
     }
 }
 
 
 
 .bottom-panel{
-    animation: bottomPanel 2s ;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    opacity: 1;
+    animation: bottomPanel 2s !important;
+    animation-timing-function: ease !important;
+    animation-fill-mode: forwards !important;
+    opacity: 1 !important;
 
-    z-index: 1001;
+    z-index: 2000;
 }
 
 @keyframes bottomPanel{
@@ -421,7 +318,7 @@ input{
     }
     100%{
         opacity: 0;
-        display: none;
+        visibility: hidden;
     }
 }
 
@@ -432,7 +329,7 @@ input{
     animation-fill-mode: forwards;
     will-change: opacity;
 
-    z-index: 1001;
+    z-index: 2000;
 }
 
 @keyframes inPanel{
@@ -443,6 +340,89 @@ input{
         opacity: 1;
     }
 }
+
+
+.left-panel{
+    animation: leftPanel 2s !important;
+    animation-timing-function: ease !important;
+    animation-fill-mode: forwards !important;
+    opacity: 1 !important;
+    z-index: 2000;
+}
+
+@keyframes leftPanel{
+    0%{
+        /* transition-timing-function: ease; */
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+
+.left-panel-opacity{
+    animation: leftPanelOpacity !important;
+    animation-duration: 2s!important;
+    /* animation-timing-function: ease !important; */
+    animation-fill-mode: forwards !important;
+    /* will-change: opacity; */
+    z-index: 2000;
+
+    transition-duration: 2s;
+    opacity: 1 !important;
+}
+
+@keyframes leftPanelOpacity{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+.right-panel{
+    animation: rightPanel 2s !important;
+    animation-timing-function: ease !important;
+    animation-fill-mode: forwards !important;
+    opacity: 1 !important;
+    z-index: 2000;
+}
+
+@keyframes rightPanel{
+    0%{
+        /* transition-timing-function: ease; */
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+.escala-boca{
+    animation: escalaMascara 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+    opacity: 1;
+}
+
+@keyframes escalaBoca{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(.5);
+    }
+}
+
+
+
+
+
 
 .m1active{
     animation: rota1 2s;
