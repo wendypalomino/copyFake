@@ -1,9 +1,11 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const hbs = require('express-handlebars')
+const routers = require('./network/routers')
 
 const router = express.Router()
 const router_vista = require('./network/router_vista')
+// const routers = require('./network/routers')
 const path = require('path')
 
 var app = express()
@@ -26,6 +28,7 @@ app.set('view engine', 'html');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 router_vista(app)
+routers(app)
 
 //------------------------------------//
 

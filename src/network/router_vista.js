@@ -21,6 +21,9 @@ const routers = function(server){
     res.render('home')
    })
 
+   router.get('/usuario', function (req, res) {
+    res.render('usuario')
+})
 
 }
 
