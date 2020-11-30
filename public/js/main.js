@@ -6,26 +6,29 @@ const $page5 = document.querySelector('.page5')
 const $page6 = document.querySelector('.page6')
 const $page7 = document.querySelector('.page7')
 
+function ejecutaAnimacion(SelectorClass,AnimacionClass, timeDelay){
+    setTimeout(() => {  document.querySelector(`${SelectorClass}`).classList.add(`${AnimacionClass}`)  }, timeDelay * 1000);
+}
+
 setTimeout(() => {  $page1.classList.add('in-panel'); }, 2000);
 
 
 $page1.addEventListener("animationend", (e)=>{
 
     if(e.animationName === "inPanel"){
-        document.querySelector('.page1 .text-big').classList.add('in-panel')
+        document.querySelector('.page1 .text-small').classList.add('top-to-bottom-suavizado')
+
+        setTimeout(() => {  document.querySelector('.page1 .text-big').classList.add('in-panel'); }, 2000);
+        setTimeout(() => {  document.querySelector('.borde-circulo').classList.add('in-panel'); }, 4000);
+
     }
-
-    if(e.animationName === "topPanel"){
-
-    }
-
 
 })
 
-document.querySelector('.page1 .text-big').addEventListener("animationend", (e)=>{
+document.querySelector('.page1 #gop2 .borde-circulo').addEventListener("animationend", (e)=>{
 
     if(e.animationName === "inPanel"){
-        document.querySelector('#gop2').classList.add('in-panel')
+        document.querySelector('.borde-circulo i').classList.add('top-down')
     }
 
 })
@@ -33,66 +36,74 @@ document.querySelector('.page1 .text-big').addEventListener("animationend", (e)=
 document.querySelector('#gop2').addEventListener("click", function(e) {
 
     $page1.classList.add('top-panel')
-    $page2.classList.add('bottom-panel')
-
-    // setTimeout(() => {  $page2.classList.add('change-fondo'); }, 2000);
+    document.querySelector('.page2After').classList.add('bottom-panel')
 
 })
 
 
 // Animacion para pagina 2
 
-document.querySelector('.page2').addEventListener("animationend", (e)=>{
+document.querySelector('.page2After').addEventListener("animationend", (e)=>{
 
     if(e.animationName === "bottomPanel"){
 
-        document.querySelector('.page2 .text-medium').classList.add('in-panel')
-        document.querySelector('.page2 img').classList.add('in-panel')
-        setTimeout(() => {  document.querySelector('.page2 .text-small').classList.add('in-panel'); }, 3000)
+        ejecutaAnimacion('.page2', 'in-panel', 1)
+        ejecutaAnimacion('.page2 img', 'in-panel', 2)
+        ejecutaAnimacion('.page2 .text-medium', 'in-panel', 3)
+        ejecutaAnimacion('.page2 .text-small-medium', 'bottom-to-top', 4)
 
     }
 
 })
 
-document.querySelector('.page2 .text-small').addEventListener("animationend", (e)=>{
+document.querySelector('.page2').addEventListener("wheel", (e)=>{
 
-    if(e.animationName === "inPanel"){
-
-        $page3.classList.add('in-panel')
-        setTimeout(() => {  $page4.classList.add('left-panel-opacity') }, 2000)
-
-    }
+    setTimeout(() => {  document.querySelector('.page2').classList.add('out-panel') }, 1000)
+    ejecutaAnimacion('.page4After', 'right-to-left-img', 2)
+    ejecutaAnimacion('.page3', 'in-panel', 2.2)
+    
 
 })
 
 
 // Animacion para pagina 4
 
-document.querySelector('.page4').addEventListener("animationend", (e)=>{
+// document.querySelector('.page4').addEventListener("animationend", (e)=>{
 
-    if(e.animationName === "leftPanelOpacity"){
+//     if(e.animationName === "leftPanelOpacity"){
 
-        document.querySelector('.page4 img').classList.add('in-panel')
+//         document.querySelector('.page4 img').classList.add('in-panel')
 
-        document.querySelector('.page4 .container-text').classList.add('bottom-panel')
-        setTimeout(() => {  document.querySelector('.page4 .boca').classList.add('in-panel'); }, 2000);
-        // setTimeout(() => {  document.querySelector('.page2 .text-small').classList.add('in-panel'); }, 2000)
+//         document.querySelector('.page4 .container-text').classList.add('bottom-panel')
+//         setTimeout(() => {  document.querySelector('.page4 .boca').classList.add('in-panel'); }, 2000);
 
+//     }
+
+// })
+
+document.querySelector('.page4After').addEventListener("animationend", (e)=>{
+
+    if(e.animationName === "rightToLeftImg"){
+
+        ejecutaAnimacion('.page4', 'in-panel', 0.1)
+        ejecutaAnimacion('.page4 .mascara-p4', 'scale-back-to-front', 1)
+        ejecutaAnimacion('.page4 .container-text', 'bottom-to-top', 3)
+        ejecutaAnimacion('.page4 .container-text div', 'transform-left-to-right', 6)
+        ejecutaAnimacion('.page4 .boca', 'scale-front-to-back', 8)
     }
 
 })
 
-// Animacion para pagina 5
+// Animacion para pagina 5 y 6
 
-document.querySelector('.page4 .boca').addEventListener("animationend", (e)=>{
+document.querySelector('.page4').addEventListener("wheel", (e)=>{
 
-    if(e.animationName === "inPanel"){
-        document.querySelector('.page4').classList.remove('leftPanelOpacity')
-        setTimeout(() => {  document.querySelector('.page5').classList.add('in-panel'); }, 2000);
-        setTimeout(() => {  document.querySelector('.page6').classList.add('in-panel'); }, 3000);
-    }
+    ejecutaAnimacion('.page5', 'in-panel', 1)
+    ejecutaAnimacion('.page6', 'in-panel', 2)
+    
 
 })
+
 
 
 // Animacion para pagina 6
@@ -101,39 +112,52 @@ document.querySelector('.page6').addEventListener("animationend", (e)=>{
 
     if(e.animationName === "inPanel"){
         
-        document.querySelector('.page6 img').classList.add('in-panel')
-        setTimeout(() => {  document.querySelector('.page6 .text-small').classList.add('in-panel'); }, 2000);
+        ejecutaAnimacion('.page6 img', 'in-panel', 1)
+        ejecutaAnimacion('.page6 .text-small-medium', 'in-panel', 2)
     }
 
 })
 
 
-// Animacion para pagina 7
+// Animacion para pagina 6 y 7
 
-document.querySelector('.page6 .text-small').addEventListener("animationend", (e)=>{
+document.querySelector('.page6').addEventListener("wheel", (e)=>{
 
-    if(e.animationName === "inPanel"){
+    ejecutaAnimacion('.page7After', 'in-panel', 1)
+    // ejecutaAnimacion('.page7', 'in-panel', 2)
 
-        setTimeout(() => {  document.querySelector('.page7').classList.add('in-panel'); }, 2000);
-        setTimeout(() => {  document.querySelector('.page7 img').classList.add('in-panel'); }, 3000);
+    // setTimeout(() => {  document.querySelector('.page7').classList.replace('in-panel', 'efecto-miedo'); }, 4000);
+    
+    ejecutaAnimacion('.page7', 'miedo', 2)
+    
 
-        setTimeout(() => {  document.querySelector('.page7 .container-text').classList.add('bottom-panel') }, 4000);
-        setTimeout(() => {  document.querySelector('.page7 .boca').classList.add('in-panel'); }, 6000);
+})
 
 
-        // setTimeout(() => {  document.querySelector('.page8').classList.add('in-panel'); }, 2000);
+// document.querySelector('.page6 .text-small').addEventListener("animationend", (e)=>{
+
+//     if(e.animationName === "inPanel"){
+
+//         setTimeout(() => {  document.querySelector('.page7').classList.add('in-panel'); }, 2000);
+//         setTimeout(() => {  document.querySelector('.page7 img').classList.add('in-panel'); }, 3000);
+
+//         setTimeout(() => {  document.querySelector('.page7 .container-text').classList.add('bottom-panel') }, 4000);
+//         setTimeout(() => {  document.querySelector('.page7 .boca').classList.add('in-panel'); }, 6000);
+
+
+//         // setTimeout(() => {  document.querySelector('.page8').classList.add('in-panel'); }, 2000);
         
-    }
+//     }
 
-})
+// })
 
 // Animacion para pagina 8
 
-document.querySelector('.page7').addEventListener("wheel", (e)=>{
+// document.querySelector('.page7').addEventListener("wheel", (e)=>{
 
-    setTimeout(() => {  document.querySelector('.page8').classList.add('in-panel'); }, 1000);
+//     setTimeout(() => {  document.querySelector('.page8').classList.add('in-panel'); }, 1000);
 
-})
+// })
 
 document.querySelector('.page8').addEventListener("animationend", (e)=>{
 

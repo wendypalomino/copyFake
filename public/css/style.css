@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Battambang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+html{
+    font-size: 16px;
+}
+
 
 body{
     margin: 0;
@@ -15,8 +24,10 @@ body{
     font-weight: 300;
 }
 
+
+
 h1, h2, h3, p{
-    color: whitesmoke;
+    color: #EDEDED;
 }
 
 .btn{
@@ -71,12 +82,9 @@ h1, h2, h3, p{
 
 .down{
 
-    font-size: 100px;
+    font-size: 60px;
     text-decoration: none;
     color: #B00909;
-
-    border: 2px solid #B00909;
-    border-radius: 50%;
 
     animation: down 3s;
     animation-fill-mode: forwards;
@@ -103,19 +111,32 @@ h1, h2, h3, p{
 }
 
 
+.top-down{
+
+    font-size: 60px;
+    text-decoration: none;
+    color: #B00909;
+
+    animation: topdown 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes topdown{
+    0%{
+        opacity: 0;
+        transform: translateY(36px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(5px);
+    }
+}
+
+
 /* Animacion para pagina 1 */
 
-/* .page1{
-
-    position: absolute;
-
-    width: 100%;
-    height: inherit;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 .tv{
     position: absolute;
@@ -163,20 +184,9 @@ h1, h2, h3, p{
     }
 }
 
-.tv2{
-    position: absolute;
-
-    width: 500px;
-    height: 300px;
-    background-image: url('/app/img/tvlluvia.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-}
 
 
 /* Animacion para pagina 2 */
-
 
 .page2{
     position: relative;
@@ -251,26 +261,6 @@ h1, h2, h3, p{
 
 
 
-/* Página 9 */
-
-/* 
-    .page9, .page10, .page11, .page12, .page13{
-    position: absolute;
-
-    width: 100%;
-    height: inherit;
-
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-
-} */
-
-
 input{
 
     width: 465px !important;
@@ -287,7 +277,6 @@ input{
 
 
 /* Transiciones de paneles */
-
 
 .top-panel{
     animation: topPanel 2s !important;
@@ -328,11 +317,57 @@ input{
 }
 
 
-.out-panel{
-    position: absolute;
 
-    animation: outPanel 1s;
+/* Animation: Suavizado de arriba a bajo */
+
+.top-to-bottom-suavizado{
+    animation: topToBottomSuavizado 1.4s !important;
+    animation-timing-function: cubic-bezier(.39,1.3,.67,1.26)!important;
+    animation-fill-mode: forwards !important;
+    opacity: 1 !important;
+
+    z-index: 2000;
+}
+
+@keyframes topToBottomSuavizado{
+    0%{
+        /* transition-timing-function: ease; */
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* Animation: De abajo a arriba */
+
+.bottom-to-top{
+    animation: bottomToTop 1.4s !important;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards !important;
+    opacity: 1 !important;
+
+    z-index: 2000;
+}
+
+@keyframes bottomToTop{
+    0%{
+        /* transition-timing-function: ease; */
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+.out-panel{
+    position: absolute !important;
+
+    animation: outPanel 1s !important;
     animation-fill-mode: forwards;
+    will-change: opacity !important;
 }
 
 @keyframes outPanel{
@@ -350,6 +385,7 @@ input{
 
     animation: inPanel 1s;
     animation-fill-mode: forwards;
+    /* animation-timing-function: cubic-bezier(.54,1.33,.85,1.22); */
     will-change: opacity;
 
     z-index: 2000;
@@ -365,15 +401,15 @@ input{
 }
 
 
-.left-panel{
-    animation: leftPanel 2s !important;
+.right-to-left-panel{
+    animation: rightToLeftPanel 1.4s !important;
     animation-timing-function: ease !important;
     animation-fill-mode: forwards !important;
     opacity: 1 !important;
     z-index: 2000;
 }
 
-@keyframes leftPanel{
+@keyframes rightToLeftPanel{
     0%{
         /* transition-timing-function: ease; */
         transform: translateX(100%);
@@ -383,17 +419,38 @@ input{
     }
 }
 
+.right-to-left-img{
+    animation: rightToLeftImg 2.0s !important;
+    animation-timing-function: ease !important;
+    animation-fill-mode: forwards !important;
+    opacity: 1 !important;
+    z-index: 2000;
+}
+
+@keyframes rightToLeftImg{
+    0%{
+        /* transition-timing-function: ease; */
+        transform: translateX(100%);
+    }
+    50%{
+        animation-duration: 5s;
+    }
+    100%{
+        transform: translateX(-5%);
+    }
+}
+
 
 
 .left-panel-opacity{
-    animation: leftPanelOpacity !important;
-    animation-duration: 2s!important;
-    /* animation-timing-function: ease !important; */
-    animation-fill-mode: forwards !important;
-    /* will-change: opacity; */
-    z-index: 2000;
+    position: relative;
 
-    transition-duration: 2s;
+    animation: leftPanelOpacity!important;
+    animation-duration: 1s !important;
+    animation-timing-function: ease !important;
+    /* animation-fill-mode: forwards !important; */
+    
+    z-index: 2000;
     opacity: 1 !important;
 }
 
@@ -425,22 +482,192 @@ input{
     }
 }
 
+/* Animation: Escala de atras a adelante  */
 
-.escala-boca{
-    animation: escalaMascara 2s;
-    animation-fill-mode: forwards;
-    position: relative;
-    opacity: 1;
+.scale-back-to-front{
+    animation: scaleBackToFront 2s !important;
+    animation-fill-mode: forwards !important;
+    will-change: opacity;
 }
 
-@keyframes escalaBoca{
+@keyframes scaleBackToFront{
     0%{
-        transform: scale(1);
+        opacity: 0;
+        transform: scale(0);
     }
     100%{
-        transform: scale(.5);
+        opacity: 1;
+        transform: scale(1);
     }
 }
+
+/* Animation: Escala de adelante a atras  */
+
+.scale-front-to-back{
+    animation: scaleFrontToBack 2s !important;
+    animation-fill-mode: forwards !important;
+    will-change: opacity;
+}
+
+@keyframes scaleFrontToBack{
+    0%{
+        opacity: 0;
+        transform: scale(2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation: bar de izquierda a derecha  */
+
+.transform-left-to-right{
+    animation: transformLeftToRight 2s !important;
+    animation-fill-mode: forwards !important;
+    will-change: opacity;
+    /* z-index: 999; */
+}
+
+@keyframes transformLeftToRight{
+    0%{
+        width: 0px;
+        /* opacity: 0; */
+    }
+    10%{
+        opacity: 1;
+        width: 20px;
+        
+    }
+    100%{
+        opacity: 1;
+        width: 325px;
+    }
+}
+
+
+/* Animation: Movimiento fondo  */
+
+.efecto-miedo{
+
+    height: 100vh;
+    width: 100%;
+
+    background-image: url('/app/img/v2/fondo5.png')  !important;
+    background-position: center !important; 
+    background-repeat: no-repeat !important; 
+   
+
+    animation: efectoMiedo 3s !important;
+    animation-fill-mode: forwards !important;
+    animation-delay: 1s !important;
+
+    opacity: 1 !important;
+    will-change: opacity !important;
+
+    z-index: 2001 !important;
+
+}
+
+@keyframes efectoMiedo{
+
+    0%{
+        background-position: -5px -5px !important;
+    }
+    20%{
+        background-position: 0px 0px !important;
+    }
+    40%{
+        background-position: -5px -5px !important;
+    }
+    50%{
+        background-position: 0px 0px !important;
+    }
+    60%{
+        background-position: -5px -5px !important;
+    }
+    80%{
+        background-position: 0px 0px !important;
+    }
+    100%{
+        background-position: -100px -10px !important;
+    }
+}
+
+
+
+
+
+.miedo{
+
+    /* height: 100vh;
+    width: 100%; */
+    /* background-image: url('/app/img/v2/fondo5.png');
+    background-repeat: no-repeat; */
+
+    animation-name: nmiedo, inPanel;
+    animation-duration: .5s, 1s;
+    will-change: opacity;
+    animation-fill-mode: forwards;
+
+    animation-iteration-count: 4, 1;
+    animation-delay: 3s, 1s;
+
+    z-index: 2000;
+}
+
+
+@keyframes nmiedo{
+
+    0%{
+        /* opacity: 1; */
+        background-position: 0px 0px;
+    }
+    10%{
+        /* opacity: 1; */
+        background-position: -10px 0px;
+    }
+    20%{
+        /* opacity: 1; */
+        background-position: 0px 0px;
+    }
+    40%{
+        background-position: -10px 0px;
+        /* opacity: 1; */
+    }
+    50%{
+        background-position: 0px 0px;
+        /* opacity: 1; */
+    }
+    60%{
+        background-position: -10px 0px;
+        /* opacity: 1; */
+    }
+    70%{
+        background-position: 0px 0px;
+        /* opacity: 1; */
+    }
+    80%{
+        background-position: -10px 0px;
+        /* opacity: 1; */
+    }90%{
+        background-position: 0x 0px;
+        /* opacity: 1; */
+    }
+    95%{
+        /* opacity: 1; */
+        background-position: -10px 0px;
+    }
+    100%{
+        /* opacity: 1; */
+        background-position: 0px 0px;
+    }
+}
+
+
+
+
+
 
 
 
@@ -490,4 +717,13 @@ input{
         transform: rotateY(180deg);
         content: url(/app/img/mascaratres180.png);
     }
+}
+
+
+
+@media screen and (max-width:768px){      
+    html {
+        font-size: 8px;
+      }
+  
 }
