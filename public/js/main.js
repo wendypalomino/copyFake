@@ -256,7 +256,6 @@ document.querySelector('.page17').addEventListener("wheel", (e)=>{
 document.querySelector('#gop19').addEventListener("click", function(e) {
 
     document.querySelector('.page19').classList.add('in-panel');
-
 })
 
 
