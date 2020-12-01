@@ -25,7 +25,7 @@ app.engine( 'html', hbs( {
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(router)
-app.use(upload.array())
+app.use(upload.array)
 
 router.get('/', function(req, res){
 
@@ -38,7 +38,7 @@ router.get('/', function(req, res){
     res.send('Hola, mundo')
 })
 
-router.post('/envioPost', function(req, res){
+router.post('/usuario', function(req, res){
     console.log(req.query)
     console.log(req.body)
     //res.send('LLamado post ' + req.body.Nombre + ' con DNI: ' + req.query.dni)

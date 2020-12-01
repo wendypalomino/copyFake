@@ -3,7 +3,7 @@ const usuario = require('../../components/usuario/network')
 
 const routers = function(server){
 
-    server.use('/usuario', usuario)
+    server.use('/api-fake-coaching/usuario', usuario)
  
 }
 

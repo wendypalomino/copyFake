@@ -1,21 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
     document
-      .getElementById('myForm')
+      .getElementById('inscripcionForm')
       .addEventListener('submit', handleForm);
   });
 
-  function handleForm(ev) {
+async function  handleForm(ev) {
 
     ev.preventDefault();
-    const myForm = ev.target;
-    const formData = new FormData(myForm);
-    const formDataJson = convertFormDataToJSON(formData)
+    const inscripcionForm = ev.target;
+    const formData = new FormData(inscripcionForm);
+    const formDataJson = await convertFormDataToJSON(formData)
     console.log(formDataJson)
     
     //Send data to backend
 
-    
+    const url = 'http://localhost:3000/api-fake-coaching/usuario';
+    const header = new Headers();
+        header.append('Content-type', 'application/json');
 
+        let req = new Request(url, {
+            headers: header,
+            body: formDataJson,
+            method: 'POST',
+          });
+        
+        fetch(req)
+          .then((res) => res.json())
+          .catch(console.warn);
+    
   }
 
   function convertFormDataToJSON(formData) {
@@ -27,42 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
  
 
-//     //send the request with the formdata
-//     let url = 'http://localhost:3000/usuario';
-//     let h = new Headers();
-//     h.append('Content-type', 'application/json');
 
-//     let req = new Request(url, {
-//       headers: h,
-//       body: json,
-//       method: 'POST',
-//     });
-   
-//     fetch(req)
-//       .then((res) => res.json())
-//       .then((data) => {
-//         console.log('Response from server');
-//         console.log(data);
-//       })
-//       .catch(console.warn);
-//   }
-
-
-
-
-// const myForm = document.getElementById('inscripcion')
-// console.log(myForm)
-
-// handleUpdate = async() => {
-   
-//     const formData = new FormData()
-//     formData.append('celular',localStorage.getItem('celular'))
-//     formData.append('correo',localStorage.getItem('email'))
-
-//     await Api.patchData('http://localhost:3001/api-csi-service/socio/0235401', formData)
-    
-    
-// }
 
 
 

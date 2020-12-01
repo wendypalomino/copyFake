@@ -56,4 +56,16 @@ router.post('/', (req, res) => {
 })
 
 
+async function postData(url, form){
+
+    const response = await fetch(url, 
+    {
+        method: "POST",
+        body: form
+    })
+  
+    return await response.json()
+      
+  }
+
 module.exports = router
