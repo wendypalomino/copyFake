@@ -260,7 +260,7 @@ document.querySelector('#gop19').addEventListener("click", function(e) {
 
 
 document.querySelector('#gop20').addEventListener("click", function(e) {
-
+    
     document.querySelector('.page20').classList.add('in-panel');
 
 })

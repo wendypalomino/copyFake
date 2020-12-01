@@ -1,8 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const hbs = require('express-handlebars')
+const multer = require('multer')
 
 const router = express.Router()
+const upload = multer()
 
 var app = express()
 
@@ -23,6 +25,7 @@ app.engine( 'html', hbs( {
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(router)
+app.use(upload.array())
 
 router.get('/', function(req, res){
 
