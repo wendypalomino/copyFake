@@ -260,6 +260,42 @@ h1, h2, h3, p{
 }
 
 
+.caida{
+    animation-name: caida, topToBottom;
+    animation-duration: 1.5s, 2s;
+    animation-iteration-count: 6, 1;
+    animation-delay: 0s, 9s;
+    transform-origin: left top;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes caida{
+    0%{
+        transform: rotate(0deg);
+    }
+    /* 40%{
+        transform: rotate(45deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    } */
+    100%{
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes topToBottom{
+    0%{
+        /* transition-timing-function: ease; */
+        transform: translateY(0vh);
+    }
+    100%{
+        transform: translateY(70vh);
+    }
+}
+
+
 
 input{
 
@@ -271,7 +307,11 @@ input{
     border-radius: 10px !important;
     padding-left: 10px !important;
 
-    color: whitesmoke !important;
+    height: 2.4rem !important;
+    font-weight: 400 !important;
+
+    color: #787878 !important;
+
 
 }
 
@@ -343,11 +383,11 @@ input{
 
 .bottom-to-top{
     animation: bottomToTop 1.4s !important;
-    animation-timing-function: ease;
+    animation-timing-function: ease !important;
     animation-fill-mode: forwards !important;
     opacity: 1 !important;
 
-    z-index: 2000;
+    z-index: 2001;
 }
 
 @keyframes bottomToTop{
@@ -482,6 +522,27 @@ input{
     }
 }
 
+
+
+.right-panel-opacity{
+    animation-name: rightPanel, inPanel !important;
+    animation-duration: 2s, 1s;
+    animation-timing-function: ease !important;
+    animation-fill-mode: forwards !important;
+    animation-delay: 0s, 1.1s !important;
+    z-index: 2000;
+}
+
+@keyframes rightPanel{
+    0%{
+        /* transition-timing-function: ease; */
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
 /* Animation: Escala de atras a adelante  */
 
 .scale-back-to-front{
@@ -546,6 +607,76 @@ input{
 }
 
 
+.transform-left-to-right-xsmall{
+    animation: transformLeftToRightXsmall 2s !important;
+    animation-fill-mode: forwards !important;
+    will-change: opacity;
+    /* z-index: 999; */
+}
+
+@keyframes transformLeftToRightXsmall{
+    0%{
+        width: 0px;
+        /* opacity: 0; */
+    }
+    10%{
+        opacity: 1;
+        width: 20px;
+        
+    }
+    100%{
+        opacity: 1;
+        width: 64px;
+    }
+}
+
+
+.transform-left-to-right-small{
+    animation: transformLeftToRightSmall 2s !important;
+    animation-fill-mode: forwards !important;
+    will-change: opacity;
+    /* z-index: 999; */
+}
+
+@keyframes transformLeftToRightSmall{
+    0%{
+        width: 0px;
+        /* opacity: 0; */
+    }
+    10%{
+        opacity: 1;
+        width: 20px;
+        
+    }
+    100%{
+        opacity: 1;
+        width: 293px;
+    }
+}
+
+
+.transform-left-to-right-big{
+    animation: transformLeftToRightBig 2s !important;
+    animation-fill-mode: forwards !important;
+    will-change: opacity;
+    /* z-index: 999; */
+}
+
+@keyframes transformLeftToRightBig{
+    0%{
+        width: 0px;
+    }
+    10%{
+        opacity: 1;
+        width: 20px;
+        
+    }
+    100%{
+        opacity: 1;
+        width: 494px;
+    }
+}
+
 /* Animation: Movimiento fondo  */
 
 .efecto-miedo{
@@ -599,11 +730,6 @@ input{
 
 
 .miedo{
-
-    /* height: 100vh;
-    width: 100%; */
-    /* background-image: url('/app/img/v2/fondo5.png');
-    background-repeat: no-repeat; */
 
     animation-name: nmiedo, inPanel;
     animation-duration: .5s, 1s;

@@ -61,7 +61,7 @@
 
 .text-big{
     /* font-size: 6vw; */
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-weight: 600; 
 
     line-height: 1em;
@@ -70,7 +70,7 @@
 }
 
 .text-big-ultra{
-    font-size: 130px; font-weight: 600; 
+    font-size: 7rem; font-weight: 600; 
 }
 
 /* Botonoes  */
@@ -325,7 +325,7 @@
     column-gap: 10px;
     row-gap: 10px;
 
-    background-image: url('/app/img/v2/fondorojo2.png');
+    background-image: url('/app/img/v2/fondorojogrande2.png');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -354,6 +354,24 @@
 
 }
 
+.page11After{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    padding: 10px;
+
+    background-image: url('/app/img/v2/fondo7.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+}
+
+
 .page11{
 
     position: absolute;
@@ -370,7 +388,7 @@
     column-gap: 10px;
     row-gap: 10px;
 
-    background-image: url('/app/img/v2/fondo7.png');
+    background-image: url('/app/img/v2/fondo6.png');
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -421,6 +439,26 @@
     
     opacity: 0;
     
+}
+
+
+.page14After{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/fondonegro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+
 }
 
 .page14{
@@ -526,30 +564,6 @@
 }
 
 
-.page18{
-
-    position: absolute;
-    display: grid;
-    grid-template: 1fr 2fr 1fr / 1fr;
-
-    height: 100vh;
-    width: 100%;
-
-    color: white;
-
-    padding: 10px;
-    
-    column-gap: 10px;
-    row-gap: 10px;
-
-    background-image: url('/app/img/v2/fondomascaras.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    
-    opacity: 0;
-    
-}
 
 .page18{
 
