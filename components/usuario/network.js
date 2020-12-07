@@ -35,9 +35,9 @@ router.post('/', (req, res) => {
   }));
 
     let mailOptions = {
-        from: 'testpalominovanessa@gmail.com',
+        from: 'fakecoachingperu@gmail.com',
         to: `${email}`,
-        subject: 'Testing and Testing',
+        subject: 'Bienvenido a FakeCoaching',
         template: 'mail',
         context: {
             name: `${name}`
@@ -55,17 +55,5 @@ router.post('/', (req, res) => {
     res.redirect('/');
 })
 
-
-async function postData(url, form){
-
-    const response = await fetch(url, 
-    {
-        method: "POST",
-        body: form
-    })
-  
-    return await response.json()
-      
-  }
 
 module.exports = router
