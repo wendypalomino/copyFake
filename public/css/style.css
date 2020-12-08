@@ -80,6 +80,30 @@ h1, h2, h3, p{
     transform: scale(0.95);
 }
 
+
+
+
+.scroll{
+    animation: opacityInfinite 2s;
+    /* animation-fill-mode: forwards; */
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    z-index: 2001;
+
+}
+
+@keyframes opacityInfinite{
+    0%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 .down{
 
     font-size: 60px;

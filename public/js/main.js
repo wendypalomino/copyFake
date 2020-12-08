@@ -52,6 +52,8 @@ document.querySelector('.page2After').addEventListener("animationend", (e)=>{
         ejecutaAnimacion('.page2 .text-medium', 'in-panel', 3)
         ejecutaAnimacion('.page2 .text-small-medium', 'bottom-to-top', 4)
 
+        ejecutaAnimacion('.objScroll', 'scroll', 7)
+
     }
 
 })
@@ -68,18 +70,6 @@ document.querySelector('.page2').addEventListener("wheel", (e)=>{
 
 // Animacion para pagina 4
 
-// document.querySelector('.page4').addEventListener("animationend", (e)=>{
-
-//     if(e.animationName === "leftPanelOpacity"){
-
-//         document.querySelector('.page4 img').classList.add('in-panel')
-
-//         document.querySelector('.page4 .container-text').classList.add('bottom-panel')
-//         setTimeout(() => {  document.querySelector('.page4 .boca').classList.add('in-panel'); }, 2000);
-
-//     }
-
-// })
 
 document.querySelector('.page4After').addEventListener("animationend", (e)=>{
 
@@ -90,6 +80,8 @@ document.querySelector('.page4After').addEventListener("animationend", (e)=>{
         ejecutaAnimacion('.page4 .container-text', 'bottom-to-top', 3)
         ejecutaAnimacion('.page4 .container-text div', 'transform-left-to-right', 6)
         ejecutaAnimacion('.page4 .boca', 'scale-front-to-back', 8)
+
+        ejecutaAnimacion('.objScroll2', 'scroll', 11)
     }
 
 })
@@ -114,6 +106,8 @@ document.querySelector('.page6').addEventListener("animationend", (e)=>{
         
         ejecutaAnimacion('.page6 img', 'in-panel', 1)
         ejecutaAnimacion('.page6 .text-small-medium', 'in-panel', 2)
+
+        ejecutaAnimacion('.objScroll3', 'scroll', 5)
     }
 
 })
@@ -134,6 +128,8 @@ document.querySelector('.page7').addEventListener("animationend", (e)=>{
         ejecutaAnimacion('.page7 .container-text', 'bottom-to-top', 3)
         ejecutaAnimacion('.page7 .container-text div', 'transform-left-to-right-small', 6)
         ejecutaAnimacion('.page7 .boca', 'scale-front-to-back', 8)
+
+        ejecutaAnimacion('.objScroll4', 'scroll', 11)
     }
 })
 
@@ -153,6 +149,8 @@ document.querySelector('.page9').addEventListener("animationend", (e)=>{
         ejecutaAnimacion('.page9  img', 'in-panel', 2)
         ejecutaAnimacion('.page9 .text-small-medium', 'in-panel', 3)
 
+        ejecutaAnimacion('.objScroll5', 'scroll', 6)
+
     }
 
 })
@@ -171,7 +169,7 @@ document.querySelector('.page9').addEventListener("wheel", (e)=>{
     ejecutaAnimacion('.page11 .container-text div', 'transform-left-to-right-big', 11)
     ejecutaAnimacion('.page11 .boca', 'scale-front-to-back', 13)
 
-
+    ejecutaAnimacion('.objScroll6', 'scroll', 16)
 
 })
 
@@ -199,6 +197,8 @@ document.querySelector('.page12').addEventListener("animationend", (e)=>{
         ejecutaAnimacion('.page13 .text-big-ultra', 'bottom-to-top', 6)
         ejecutaAnimacion('.page13 .container-text', 'in-panel', 7)
         ejecutaAnimacion('.page13 .barra-r', 'transform-left-to-right-xsmall', 8)
+        
+        ejecutaAnimacion('.objScroll7', 'scroll', 16)
 
     }
 
@@ -228,8 +228,7 @@ document.querySelector('.page14After').addEventListener("animationend", (e)=>{
         // ejecutaAnimacion('.page16', 'in-panel', 6.1)
         ejecutaAnimacion('.page16', 'right-panel-opacity', 6)
 
-        // setTimeout(() => {  document.querySelector('.page15').classList.add('right-panel'); }, 1000);
-        // setTimeout(() => {  document.querySelector('.page16').classList.add('in-panel'); }, 3000);
+        
 
     }
 
@@ -246,6 +245,8 @@ document.querySelector('.page16').addEventListener("animationend", (e)=>{
         setTimeout(() => {  document.querySelector('.page16 .pr2').classList.add('in-panel'); }, 4000);
         setTimeout(() => {  document.querySelectorAll('.page16 .text-small')[1].classList.add('in-panel'); }, 6000);
 
+        ejecutaAnimacion('.objScroll8', 'scroll', 9)
+
     }
 
 })
@@ -260,6 +261,7 @@ document.querySelector('.page17').addEventListener("animationend", (e)=>{
 
     if(e.animationName === "inPanel"){
         ejecutaAnimacion('.page17 .text-big-ultra', 'in-panel', 1)
+        ejecutaAnimacion('.objScroll9', 'scroll', 4)
 
     }
 
