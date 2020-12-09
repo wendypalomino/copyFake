@@ -2,16 +2,28 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-handlebars')
+const fs = require('fs')
 require('dotenv').config();
 
 router.post('/', (req, res) => {
-    const { name , email } = req.body;
+    const { name , email , cellphone } = req.body;
+    const data = `Nombre completo: ${name}; Correo: ${email};  Celular: ${cellphone}`
 
-    // contentHtml = `
-    // <h1>Hola </h1>
-    // <p>Tu correo electrónico  ha sido registrado satisfactoriamente.</p>
-    // `
-    
+    saveDataTxt(data);
+    sendEmail(name, email);
+    // res.redirect('/');
+})
+
+const saveDataTxt =  (data) => {
+    fs.appendFile('suscription.txt', data + "\n", function(err){
+       if(err){
+           throw(err)
+       }
+   })
+}
+
+const sendEmail = (name , email) =>{
+
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 587,
@@ -32,7 +44,7 @@ router.post('/', (req, res) => {
        },
         viewPath:"./src/views/",
         extName:".hbs"
-  }));
+    }));
 
     let mailOptions = {
         from: 'fakecoachingperu@gmail.com',
@@ -51,9 +63,8 @@ router.post('/', (req, res) => {
     .catch(function(error){
         console.log('Error', error)
     })
+}
 
-    res.redirect('/');
-})
 
 
 module.exports = router
