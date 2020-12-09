@@ -7,11 +7,11 @@ require('dotenv').config();
 
 router.post('/', (req, res) => {
     const { name , email , cellphone } = req.body;
-    const data = `Nombre completo: ${name}; Correo: ${email};  Celular: ${cellphone}`
+    const nombre = name.toUpperCase()
+    const data = `Nombre completo: ${nombre} ; Correo: ${email};  Celular: ${cellphone}`
 
     saveDataTxt(data);
-    sendEmail(name, email);
-    // res.redirect('/');
+    // sendEmail(name, email);
 })
 
 const saveDataTxt =  (data) => {
