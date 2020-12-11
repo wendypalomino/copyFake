@@ -84,12 +84,9 @@ h1, h2, h3, p{
 
 
 .scroll{
-    animation: opacityInfinite 2s;
-    /* animation-fill-mode: forwards; */
-    animation-direction: reverse;
-    animation-iteration-count: infinite;
+    animation: inPanel 2s;
+    animation-fill-mode: forwards;
     z-index: 2001;
-
 }
 
 @keyframes opacityInfinite{
@@ -285,10 +282,10 @@ h1, h2, h3, p{
 
 
 .caida{
-    animation-name: caida, topToBottom;
-    animation-duration: 1.5s, 2s;
-    animation-iteration-count: 6, 1;
-    animation-delay: 0s, 9s;
+    animation-name: caida, topToBottom, outPanel;
+    animation-duration: 1.5s, 2s, 2s;
+    animation-iteration-count: 6, 1, 1;
+    animation-delay: 0s, 9s, 9.2s;
     transform-origin: left top;
     animation-fill-mode: forwards;
     animation-direction: alternate;
@@ -872,8 +869,235 @@ input{
 
 
 @media screen and (max-width:768px){      
+    
     html {
         font-size: 8px;
       }
-  
+
+    body{
+        overflow: hidden;
+        touch-action: none;
+    }
+
+    #gop3 {
+        transform: scale(0.6);
+        position: relative;
+        left: 74px;
+        bottom: 35px !important;
+    }  
+
+    #gop3 img{
+        bottom: 13px !important;
+        right: 11px !important;
+        width: 92px !important;
+        
+    }
+
+    #gop3 i{
+        bottom: 35px !important;
+        right: 34px !important;
+    }
+
+
+    /* Repsonsive - Page 4 */
+
+    .page4{
+        transform: scale(0.8) !important;
+        grid-template: 1fr 2fr 1fr / 1fr !important;
+    }
+
+    
+    .page4 .mascarag1{
+        width: 100% !important;
+    }
+
+    #gop4{
+        transform: scale(0.6);
+        position: relative;
+        left: 77px;
+        bottom: 5px !important;
+    }
+
+    #gop4 img{
+        width: 100%;
+        bottom: 13px !important;
+        right: 11px !important;
+    }
+
+    #gop4 i{
+        bottom: 35px !important;
+        right: 34px !important;
+    }
+
+    .page4 .container-text div{
+        transform: scale(0.6) !important;
+        left: 0px !important;
+        bottom: 50px !important;
+    }
+
+    .page4 .container-text{
+        margin: 1% auto !important;
+    }
+
+
+    /* Repsonsive - Page 6 */
+
+    #gop5{
+        position: relative;
+        transform: scale(0.6);
+        bottom: 25px;
+        right: -115px !important;
+    }
+
+
+     /* Repsonsive - Page 7 */
+
+    .page7{
+        grid-template: 1fr 2fr 1fr / 1fr !important;
+    }
+
+    
+    .page7 .mascarag2{
+        width: 100% !important;
+    }
+
+    .page7 .container-text{
+        margin: 0% auto !important;
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .page7 .container-text div{
+        transform: scale(0.5) !important;
+        left: -2px !important;
+        bottom: 50px !important;
+    }
+
+    .pag7 .boca{
+        margin-left: 15px !important;
+    }
+
+    #gop6{
+        position: relative;
+        transform: scale(0.6);
+
+        bottom: 53px;
+        left: 118px;
+    }
+
+
+    #gop7{
+
+    transform: scale(0.6);
+    position: relative;
+    margin: 26px auto;
+    right: -209px;
+    bottom: 11px;
+
+    }
+
+    #gop8{
+        transform: scale(0.6);
+        position: relative;
+        right: -121px;
+        bottom: 12px;
+    }
+
+    /* Repsonsive - Page 9 */
+
+    #gop9{
+    
+        transform: scale(0.6);
+        position: relative;
+        right: -108px;
+        top: -220px;
+    }
+
+    .page9 .container{
+        transform: scale(0.8);
+    }
+
+
+    /* Repsonsive - Page 11 */
+
+    .page11{
+        /* transform: scale(0.8) !important; */
+        grid-template: 10px 10px 1fr 1fr/ 1fr !important;
+    }
+
+    .page11 .mascarag3{
+        width: 100% !important;
+    }
+
+
+    .page11 .container{
+        transform: scale(0.8);
+    }
+
+    .page11 .container-text{
+        margin: 0% auto !important;
+        text-align: center;
+        padding-left: 0px;
+        margin-top: -40px !important;
+    }
+
+    .page11 .container-text div{
+        transform: scale(0.5) !important;
+        left: -79px !important;
+        bottom: -15px !important;
+        position: absolute !important;
+    }
+
+
+    /* Repsonsive - Page 11 */
+
+    .page13 .container{
+        transform: scale(0.6);
+    }
+
+    .page13 .barra-r{
+        height: 33px !important;
+        left: 140px !important;
+        top: 115px !important;
+        z-index: 999 !important;
+    }
+
+    #gop10  {
+    transform: scale(0.6);
+    left: -100px;
+    position: relative;
+    bottom: 50px !important;
+    }
+
+
+    .page16 .text-small{
+        transform: scale(0.6);
+        left: 100px !important;
+    }
+
+    .page16 .npr{
+        left: 0px !important;
+    }
+    
+
+    .page16 .pr1{
+        padding: 0 2.63rem 0 3.3rem !important;
+    }
+    
+
+    .page17 .text-big-ultra{
+        font-size: 5rem;
+    }
+
+    #gop11 {
+        transform: scale(0.6);
+        position: relative;
+        left: 97px;
+        bottom: 90px;
+    }
+
+    .page19 input{
+        height: 47px !important;
+        width: 97% !important;
+    }
 }

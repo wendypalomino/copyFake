@@ -241,6 +241,7 @@
 
     background-image: url('/app/img/v2/fondorojogrande.png');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     
     opacity: 0;
@@ -327,6 +328,7 @@
 
     background-image: url('/app/img/v2/fondorojogrande2.png');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 
     opacity: 0;
@@ -379,7 +381,7 @@
     grid-template: 1fr 2fr 1fr / 1fr 2fr;
 
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 
     color: white;
 
@@ -676,6 +678,26 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
+    
+    opacity: 0;
+
+}
+
+.page23{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/ahora2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     
     opacity: 0;
 
