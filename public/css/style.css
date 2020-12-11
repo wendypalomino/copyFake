@@ -903,7 +903,8 @@ input{
 
     .page4{
         transform: scale(0.8) !important;
-        grid-template: 1fr 2fr 1fr / 1fr !important;
+        grid-template: 10px 10px 1fr 1fr/ 1fr !important;
+        /* grid-template: 1fr 2fr 1fr / 1fr !important; */
     }
 
     
@@ -953,7 +954,8 @@ input{
      /* Repsonsive - Page 7 */
 
     .page7{
-        grid-template: 1fr 2fr 1fr / 1fr !important;
+        grid-template: 10px 10px 1fr 1fr/ 1fr !important;
+        /* grid-template: 1fr 2fr 1fr / 1fr !important; */
     }
 
     
