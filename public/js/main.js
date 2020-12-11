@@ -96,8 +96,8 @@ document.querySelector('#gop3').addEventListener("click", function(e) {
 document.querySelector('.page2').addEventListener("wheel", (e)=>{
 
     setTimeout(() => {  document.querySelector('.page2').classList.add('out-panel') }, 0)
-    ejecutaAnimacion('.page4After', 'right-to-left-img', 1)
-    ejecutaAnimacion('.page3', 'in-panel', 1.2)
+    ejecutaAnimacion('.page4After', 'right-to-left-img', 0.5)
+    ejecutaAnimacion('.page3', 'in-panel', 1)
     
 
 })
@@ -110,7 +110,7 @@ document.querySelector('.page4After').addEventListener("animationend", (e)=>{
 
     if(e.animationName === "rightToLeftImg"){
 
-        ejecutaAnimacion('.page4', 'in-panel', 0.1)
+        ejecutaAnimacion('.page4', 'in-panel', 0)
         ejecutaAnimacion('.page4 .mascarag1', 'scale-back-to-front', 1)
         ejecutaAnimacion('.page4 .container-text', 'bottom-to-top', 2)
         ejecutaAnimacion('.page4 .container-text div', 'transform-left-to-right', 4)
