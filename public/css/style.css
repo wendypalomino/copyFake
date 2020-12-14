@@ -903,10 +903,16 @@ input{
 
     .page4{
         transform: scale(0.8) !important;
-        /* grid-template: 10px 10px 1fr 1fr/ 1fr !important; */
-        grid-template: 1fr 2fr 1fr / 1fr !important;
+        grid-template: 1fr 2fr 1fr 1fr/ 1fr !important;
     }
 
+    .page4 .item:nth-of-type(1){
+        grid-column: 1 / span 1 !important;
+    }
+
+    .page4 .item:nth-of-type(4){
+        grid-column: 1 / span 1 !important;
+    }
     
     .page4 .mascarag1{
         width: 100% !important;
@@ -914,26 +920,14 @@ input{
 
     #gop4{
         transform: scale(0.6);
-        position: relative;
-        left: 77px;
-        bottom: 5px !important;
+        
     }
 
-    #gop4 img{
-        width: 100%;
-        bottom: 13px !important;
-        right: 11px !important;
-    }
-
-    #gop4 i{
-        bottom: 35px !important;
-        right: 34px !important;
-    }
 
     .page4 .container-text div{
         transform: scale(0.6) !important;
         left: 0px !important;
-        bottom: 50px !important;
+        bottom: -15px !important;
     }
 
     .page4 .container-text{
@@ -953,11 +947,18 @@ input{
 
      /* Repsonsive - Page 7 */
 
-    .page7{
-        grid-template: 10px 10px 1fr 1fr/ 1fr !important;
-        /* grid-template: 1fr 2fr 1fr / 1fr !important; */
+     .page7{
+        transform: scale(0.8) !important;
+        grid-template: 1fr 2fr 1fr 1fr/ 1fr !important;
     }
 
+    .page7 .item:nth-of-type(1){
+        grid-column: 1 / span 1 !important;
+    }
+
+    .page7 .item:nth-of-type(4){
+        grid-column: 1 / span 1 !important;
+    }
     
     .page7 .mascarag2{
         width: 100% !important;
