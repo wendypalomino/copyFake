@@ -10,9 +10,8 @@ router.post('/', (req, res) => {
     const nombre = name.toUpperCase()
     const data = `${nombre} | ${email} | ${cellphone}`
 
-    saveDataTxt(data);
-   
-    // sendEmail(name, email);
+    // saveDataTxt(data);
+    sendEmail(name, email);
 })
 
 const saveDataTxt =  (data) => {
