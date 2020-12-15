@@ -926,7 +926,7 @@ input{
 
     .page4 .container-text div{
         transform: scale(0.6) !important;
-        left: 0px !important;
+        left: -10px !important;
         bottom: -15px !important;
     }
 
@@ -948,12 +948,15 @@ input{
      /* Repsonsive - Page 7 */
 
      .page7{
-        transform: scale(0.8) !important;
         grid-template: 1fr 2fr 1fr 1fr/ 1fr !important;
     }
 
     .page7 .item:nth-of-type(1){
         grid-column: 1 / span 1 !important;
+    }
+
+    .page7 .item:nth-of-type(2) img{
+        transform: scale(0.8);
     }
 
     .page7 .item:nth-of-type(4){
@@ -972,8 +975,8 @@ input{
 
     .page7 .container-text div{
         transform: scale(0.5) !important;
-        left: -2px !important;
-        bottom: 50px !important;
+        left: -22px !important;
+        bottom: -14px !important;
     }
 
     .pag7 .boca{
@@ -981,11 +984,8 @@ input{
     }
 
     #gop6{
-        position: relative;
         transform: scale(0.6);
 
-        bottom: 53px;
-        left: 118px;
     }
 
 
@@ -1001,9 +1001,6 @@ input{
 
     #gop8{
         transform: scale(0.6);
-        position: relative;
-        right: -121px;
-        bottom: 12px;
     }
 
     /* Repsonsive - Page 9 */
@@ -1023,9 +1020,22 @@ input{
 
     /* Repsonsive - Page 11 */
 
+
     .page11{
         /* transform: scale(0.8) !important; */
-        grid-template: 10px 10px 1fr 1fr/ 1fr !important;
+        grid-template: 1fr 2fr 1fr 1fr/ 1fr !important;
+    }
+
+    .page11 .item:nth-of-type(1){
+        grid-column: 1 / span 1 !important;
+    }
+
+    .page11 .item:nth-of-type(2) img{
+        transform: scale(0.8);
+    }
+
+    .page11 .item:nth-of-type(4){
+        grid-column: 1 / span 1 !important;
     }
 
     .page11 .mascarag3{
@@ -1042,6 +1052,7 @@ input{
         text-align: center;
         padding-left: 0px;
         margin-top: -40px !important;
+        transform: scale(0.8) !important
     }
 
     .page11 .container-text div{
