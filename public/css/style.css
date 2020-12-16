@@ -893,6 +893,8 @@ input{
 
     .page2{
         grid-template: 1fr 2fr 0.1fr 1fr/ 1fr !important;
+        background-position-y: -3rem !important;
+        background-position-x: center !important;
     }
 
     
@@ -925,7 +927,7 @@ input{
 
     .page4 .container-text div{
         transform: scale(0.6) !important;
-        left: 2px !important;
+        left: 1% !important;
         bottom: -15px !important;
         width: 271px !important;
     }

@@ -6,6 +6,36 @@ const $page5 = document.querySelector('.page5')
 const $page6 = document.querySelector('.page6')
 const $page7 = document.querySelector('.page7')
 
+console.log(window.navigator)
+// alert(window.navigator.appName + " - " + window.navigator.vendor) 
+
+var ua = navigator.userAgent;
+
+if (ua.indexOf("FBAN") != -1 || ua.indexOf("FBAV") != -1) {
+    if (!window.location.href.match('redirect_fb')) {
+    //   window.location.href = "https://example/redirect_fb/";
+
+    alert("Esta en facebook ....")
+
+    // var a = document.createElement('a'); 
+    // a.href = "/exe"; 
+    // a.target='_blank'; 
+    // a.click(); 
+
+    
+    // var a = document.createElement('a'); 
+    // a.href = "/exe"; 
+    // a.target='_new'; 
+    // a.click(); 
+
+    // window.open("http://myLink.com")
+
+    }
+  }
+
+
+
+
 
 
 $page1.addEventListener('touchmove', function(e) { 
