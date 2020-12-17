@@ -1,4 +1,5 @@
 const express = require('express')
+const open = require('open');
 
 const routers = function(server){
 
@@ -24,6 +25,14 @@ const routers = function(server){
    router.get('/usuario', function (req, res) {
     res.render('usuario')
 })
+
+   router.get('/exe', async function(req, res){
+   
+    res.send("Hola")
+   
+
+   })
+   
 
 }
 

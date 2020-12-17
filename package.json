@@ -4,7 +4,8 @@
   "description": "LandingPage",
   "main": "src/app.js",
   "scripts": {
-    "start": "nodemon src/app.js",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Interfaz Productos Digitales del Perú",
@@ -20,6 +21,7 @@
     "nodemailer": "^6.4.16",
     "nodemailer-handlebars": "^1.0.1",
     "nodemon": "^2.0.4",
+    "open": "^7.3.0",
     "path": "^0.12.7"
   }
 }

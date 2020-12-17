@@ -5,12 +5,19 @@ const hbs = require('nodemailer-handlebars')
 const fs = require('fs')
 require('dotenv').config();
 
+
+
+router.get('/', function(req, res){
+    res.render('home')
+   })
+
+
 router.post('/', (req, res) => {
     const { name , email , cellphone } = req.body;
     const nombre = name.toUpperCase()
     const data = `${nombre} | ${email} | ${cellphone}`
 
-    // saveDataTxt(data);
+    saveDataTxt(data);
     sendEmail(name, email);
 })
 

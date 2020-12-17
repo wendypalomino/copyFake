@@ -14,7 +14,7 @@
     height: 100vh;
     width: 100%;
 
-    color: white;
+    color: #EDEDED;
     opacity: 0;
     text-align: center;
     padding: 10px;
@@ -24,7 +24,9 @@
 
     background-image: url('/app/img/v2/mascaras.png');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+
 
     
 }
@@ -41,34 +43,99 @@
 
 }
 
+.container-top{
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.container-bottom{
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
 .text-small{
-    font-size: 25px; 
+    font-size: 1.25rem; 
+    font-weight: 400; 
+}
+
+.text-small-medium{
+    font-size: 2.25rem; 
     font-weight: 400; 
 }
 
 .text-medium{
-    font-size: 48px; font-weight: 600; 
+    font-size: 3rem; 
+    font-weight: 600; 
 }
 
 
 .text-big{
-    font-size: 96px; font-weight: 600; 
+    /* font-size: 6vw; */
+    font-size: 4.5rem;
+    font-weight: 600; 
+
+    line-height: 1em;
+    /* padding: 1em;
+    margin: 1em; */
 }
 
 .text-big-ultra{
-    font-size: 130px; font-weight: 600; 
+    font-size: 7rem; font-weight: 600; 
 }
 
+/* Botonoes  */
+
+.borde-circulo{
+    
+    width: 72px;
+    height: 72px;
+    border: 3px solid #B00909;
+    border-radius: 50%;
+    
+}
 
 /* Estilos para page2 */
+
+.page2After{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100vw;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/fondorojo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+
+}
+
 
 .page2{
     position: absolute;
     display: grid;
-    grid-template: 1fr 2fr 1fr / 1fr;
+    grid-template: 2fr 2fr 1fr 120px 1px/ 1fr;
 
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 
     color: white;
     
@@ -80,7 +147,12 @@
 
     background-image: url('/app/img/v2/fondorojo2.png');
     background-size: cover;
+    /* background-position: center; */
     background-repeat: no-repeat;
+
+    background-position-y: -1rem;
+    background-position-x: center;
+
     
 }
 
@@ -114,12 +186,33 @@
     column-gap: 10px;
     row-gap: 10px;
 
-    background-image: url('/app/img/v2/fondorojo3.png');
+    background-image: url('/app/img/v2/fondovictima.png');
     background-size: cover;
     background-repeat: no-repeat;
     
     opacity: 0;
     
+}
+
+.page4After{
+
+    position: absolute;
+
+    height: 107vh;
+    width: 3561px;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/victima2.png');
+    background-size: 100% 100%;
+    /* background-size: cover; */
+    background-position-y: -17px;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+
 }
 
 .page4{
@@ -131,16 +224,12 @@
     width: 100%;
 
     color: white;
-    
+
     padding: 10px;
-    
+
     column-gap: 10px;
     row-gap: 10px;
 
-    background-image: url('/app/img/v2/fondorojo4.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    
     opacity: 0;
     
 }
@@ -164,7 +253,7 @@
 .page6{
     position: absolute;
     display: grid;
-    grid-template: 1fr 2fr 1fr / 1fr;
+    grid-template: 2fr 2fr 1fr 120px/ 1fr;
 
     height: 100vh;
     width: 100%;
@@ -177,13 +266,34 @@
     column-gap: 10px;
     row-gap: 10px;
 
-    background-image: url('/app/img/v2/fondorojo2.png');
+    background-image: url('/app/img/v2/fondorojogrande.png');
     background-size: cover;
+    /* background-position: center; */
+    background-position-y: -1rem;
+    background-position-x: center;
+
     background-repeat: no-repeat;
     
     opacity: 0;
     
 }
+
+.page7After{
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+
+    background-image: url('/app/img/v2/fondorojo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+
+}
+
 
 
 .page7{
@@ -206,8 +316,10 @@
     background-repeat: no-repeat;
     
     opacity: 0;
-    
+
+
 }
+
 
 .page8{
 
@@ -231,7 +343,7 @@
 
     position: absolute;
     display: grid;
-    grid-template: 1fr 2fr 1fr / 1fr;
+    grid-template: 2fr 2fr 1fr 120px/ 1fr;
 
     height: 100vh;
     width: 100%;
@@ -244,9 +356,13 @@
     column-gap: 10px;
     row-gap: 10px;
 
-    background-image: url('/app/img/v2/fondorojo2.png');
+    background-image: url('/app/img/v2/fondorojogrande2.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-position-y: -1rem;
+    background-position-x: center;
+
+    /* background-repeat: no-repeat; */
 
     opacity: 0;
 
@@ -273,6 +389,24 @@
 
 }
 
+.page11After{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    padding: 10px;
+
+    background-image: url('/app/img/v2/fondo7.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+}
+
+
 .page11{
 
     position: absolute;
@@ -280,7 +414,7 @@
     grid-template: 1fr 2fr 1fr / 1fr 2fr;
 
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 
     color: white;
 
@@ -289,7 +423,7 @@
     column-gap: 10px;
     row-gap: 10px;
 
-    background-image: url('/app/img/v2/fondo7.png');
+    background-image: url('/app/img/v2/fondo6.png');
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -340,6 +474,26 @@
     
     opacity: 0;
     
+}
+
+
+.page14After{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/fondonegro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+
 }
 
 .page14{
@@ -445,30 +599,6 @@
 }
 
 
-.page18{
-
-    position: absolute;
-    display: grid;
-    grid-template: 1fr 2fr 1fr / 1fr;
-
-    height: 100vh;
-    width: 100%;
-
-    color: white;
-
-    padding: 10px;
-    
-    column-gap: 10px;
-    row-gap: 10px;
-
-    background-image: url('/app/img/v2/fondomascaras.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    
-    opacity: 0;
-    
-}
 
 .page18{
 
@@ -581,6 +711,26 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
+    
+    opacity: 0;
+
+}
+
+.page23{
+
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+
+    color: white;
+    
+    padding: 10px;
+
+    background-image: url('/app/img/v2/ahora2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     
     opacity: 0;
 
