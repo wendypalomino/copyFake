@@ -22,18 +22,9 @@ if (ua.indexOf("FBAN") != -1 || ua.indexOf("FBAV") != -1) {
     // a.target='_blank'; 
     // a.click(); 
 
-    
-    // var a = document.createElement('a'); 
-    // a.href = "/exe"; 
-    // a.target='_new'; 
-    // a.click(); 
-
-    // window.open("http://myLink.com")
 
     }
   }
-
-
 
 
 
@@ -281,16 +272,16 @@ document.querySelector('.page9').addEventListener('touchmove', function(e) {
     document.querySelector('.page9').addEventListener('touchend', function(e) {
         // e.preventDefault();
 
-    ejecutaAnimacion('.page10', 'bottom-panel', 0)
+        ejecutaAnimacion('.page10', 'bottom-panel', 0)
 
-    ejecutaAnimacion('.page11After', 'in-panel', 1)
-    ejecutaAnimacion('.page11', 'in-panel', 2)
-    ejecutaAnimacion('.page11 .mascarag3', 'scale-back-to-front', 4)
-    ejecutaAnimacion('.page11 .container-text', 'bottom-to-top', 5)
-    ejecutaAnimacion('.page11 .container-text div', 'transform-left-to-right-big', 6)
-    ejecutaAnimacion('.page11 .boca', 'scale-front-to-back',7)
-
-    ejecutaAnimacion('.objScroll6', 'scroll', 8)
+        ejecutaAnimacion('.page11After', 'in-panel', 2)
+        ejecutaAnimacion('.page11', 'in-panel', 4)
+        ejecutaAnimacion('.page11 img', 'scale-back-to-front', 5)
+        ejecutaAnimacion('.page11 .container-text', 'bottom-to-top', 6)
+        ejecutaAnimacion('.page11 .container-text div', 'transform-left-to-right-big', 7)
+        ejecutaAnimacion('.page11 .boca', 'scale-front-to-back', 8)
+    
+        ejecutaAnimacion('.objScroll6', 'scroll', 8)
 
 
     })
@@ -300,12 +291,12 @@ document.querySelector('#gop7').addEventListener("click", function(e) {
 
     ejecutaAnimacion('.page10', 'bottom-panel', 0)
 
-    ejecutaAnimacion('.page11After', 'in-panel', 1)
-    ejecutaAnimacion('.page11', 'in-panel', 2)
-    ejecutaAnimacion('.page11 img', 'scale-back-to-front', 4)
-    ejecutaAnimacion('.page11 .container-text', 'bottom-to-top', 5)
-    ejecutaAnimacion('.page11 .container-text div', 'transform-left-to-right-big', 6)
-    ejecutaAnimacion('.page11 .boca', 'scale-front-to-back', 7)
+    ejecutaAnimacion('.page11After', 'in-panel', 2)
+    ejecutaAnimacion('.page11', 'in-panel', 4)
+    ejecutaAnimacion('.page11 img', 'scale-back-to-front', 5)
+    ejecutaAnimacion('.page11 .container-text', 'bottom-to-top', 6)
+    ejecutaAnimacion('.page11 .container-text div', 'transform-left-to-right-big', 7)
+    ejecutaAnimacion('.page11 .boca', 'scale-front-to-back', 8)
 
     ejecutaAnimacion('.objScroll6', 'scroll', 8)
 
@@ -315,14 +306,14 @@ document.querySelector('.page9').addEventListener("wheel", (e)=>{
 
     ejecutaAnimacion('.page10', 'bottom-panel', 0)
 
-    ejecutaAnimacion('.page11After', 'in-panel', 1)
-    ejecutaAnimacion('.page11', 'in-panel', 2)
-    ejecutaAnimacion('.page11 img', 'scale-back-to-front', 3)
-    ejecutaAnimacion('.page11 .container-text', 'bottom-to-top', 4)
-    ejecutaAnimacion('.page11 .container-text div', 'transform-left-to-right-big', 5)
-    ejecutaAnimacion('.page11 .boca', 'scale-front-to-back', 6)
+    ejecutaAnimacion('.page11After', 'in-panel', 2)
+    ejecutaAnimacion('.page11', 'in-panel', 4)
+    ejecutaAnimacion('.page11 img', 'scale-back-to-front', 5)
+    ejecutaAnimacion('.page11 .container-text', 'bottom-to-top', 6)
+    ejecutaAnimacion('.page11 .container-text div', 'transform-left-to-right-big', 7)
+    ejecutaAnimacion('.page11 .boca', 'scale-front-to-back', 8)
 
-    ejecutaAnimacion('.objScroll6', 'scroll', 7)
+    ejecutaAnimacion('.objScroll6', 'scroll', 8)
 
 })
 
@@ -410,7 +401,7 @@ document.querySelector('.page14After').addEventListener("animationend", (e)=>{
         ejecutaAnimacion('.page15', 'right-panel-opacity', 1)
 
         // ejecutaAnimacion('.page16', 'in-panel', 6.1)
-        ejecutaAnimacion('.page16', 'right-panel-opacity', 3)
+        ejecutaAnimacion('.page16', 'right-panel-opacity', 2)
 
         
 
@@ -527,7 +518,7 @@ document.querySelector('#gop20').addEventListener("click", function(e) {
 document.querySelector('.page20').addEventListener("animationend", (e)=>{
 
     if(e.animationName === "inPanel"){
-        setTimeout(() => {  document.querySelector('.page21').classList.add('in-panel'); }, 0);
+        setTimeout(() => {  document.querySelector('.page21').classList.add('in-panel'); }, 1);
     }
 
 })
@@ -548,9 +539,9 @@ document.querySelector('.page21 .text-small').addEventListener("animationend", (
 
     if(e.animationName === "inPanel"){
 
-        setTimeout(() => {  document.querySelector('.page21 .text-small').classList.replace('in-panel','out-panel'); }, 0);
-        setTimeout(() => {  document.querySelector('.page21 .text-big').classList.replace('in-panel','out-panel'); }, 1000);
-        setTimeout(() => {  document.querySelector('.page21 img').classList.replace('in-panel','out-panel'); }, 2000);
+        setTimeout(() => {  document.querySelector('.page21 .text-small').classList.replace('in-panel','out-panel'); }, 2000);
+        setTimeout(() => {  document.querySelector('.page21 .text-big').classList.replace('in-panel','out-panel'); }, 3000);
+        setTimeout(() => {  document.querySelector('.page21 img').classList.replace('in-panel','out-panel'); }, 4000);
 
     }
 
